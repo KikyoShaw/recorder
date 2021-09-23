@@ -1,6 +1,7 @@
 #include "recorderWidget.h"
 #include "RecorderManager.h"
 #include <QThread>
+#include "recorderWindow.h"
 
 recorder::recorder(QWidget *parent)
     : QWidget(parent)
@@ -19,6 +20,7 @@ recorder::recorder(QWidget *parent)
 
 	connect(ui.pushButton_start, &QPushButton::clicked, this, &recorder::sltRecorderStart);
 	connect(ui.pushButton_stop, &QPushButton::clicked, this, &recorder::sltRecorderStop);
+	connect(ui.pushButton_start_2, &QPushButton::clicked, this, &recorder::sltRecorderWindow);
 }
 
 recorder::~recorder()
@@ -39,6 +41,17 @@ void recorder::sltRecorderStop()
 			m_thread->quit();
 			m_thread->wait();
 		}
+	}
+}
+
+void recorder::sltRecorderWindow()
+{
+	m_recorderWindow = QSharedPointer<recorderWindow>(new recorderWindow());
+	if (m_recorderWindow) {
+		connect(m_recorderWindow.data(), &recorderWindow::sigRecorderWindowClose, this, &recorder::show);
+		this->hide();
+		m_recorderWindow->show();
+		m_recorderWindow->activateWindow();
 	}
 }
 

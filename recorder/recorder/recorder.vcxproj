@@ -105,6 +105,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="recorderWindow.cpp" />
     <QtRcc Include="recorder.qrc" />
     <QtUic Include="recorderWidget.ui" />
     <QtMoc Include="recorderWidget.h" />
@@ -114,6 +115,9 @@
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="RecorderManager.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="recorderWindow.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

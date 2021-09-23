@@ -43,9 +43,15 @@
     <ClCompile Include="RecorderManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="recorderWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="RecorderManager.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="recorderWindow.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>

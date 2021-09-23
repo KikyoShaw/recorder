@@ -30,3 +30,7 @@
 *.exe
 *.out
 *.app
+
+/recorder/.vs
+/recorder/recorder/Debug
+/recorder/recorder/Release
