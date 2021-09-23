@@ -21,6 +21,9 @@
       <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
       <Extensions>ts</Extensions>
     </Filter>
+    <Filter Include="test">
+      <UniqueIdentifier>{69623f30-ac5a-434e-bc44-6dbff3c7965f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="recorder.qrc">
@@ -49,6 +52,15 @@
     <ClCompile Include="audioRecorder.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="test\aencode.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="test\gdigrab.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="test\mainwindow.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="RecorderManager.h">
@@ -57,10 +69,24 @@
     <QtMoc Include="recorderWindow.h">
       <Filter>Header Files</Filter>
     </QtMoc>
+    <QtMoc Include="test\mainwindow.h">
+      <Filter>test</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="audioRecorder.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="test\aencode.h">
+      <Filter>test</Filter>
+    </ClInclude>
+    <ClInclude Include="test\gdigrab.h">
+      <Filter>test</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="test\mainwindow.ui">
+      <Filter>test</Filter>
+    </QtUic>
   </ItemGroup>
 </Project>

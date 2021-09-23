@@ -60,7 +60,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>$(SolutionDir)recorder\ffmpeg\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)recorder\ffmpeg\include;$(SolutionDir)recorder\test;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>$(SolutionDir)recorder\ffmpeg\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -70,7 +70,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>$(SolutionDir)recorder\ffmpeg\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)recorder\ffmpeg\include;$(SolutionDir)recorder\test;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>$(SolutionDir)recorder\ffmpeg\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -107,12 +107,16 @@
   <ItemGroup>
     <ClCompile Include="audioRecorder.cpp" />
     <ClCompile Include="recorderWindow.cpp" />
+    <ClCompile Include="test\aencode.cpp" />
+    <ClCompile Include="test\gdigrab.cpp" />
+    <ClCompile Include="test\mainwindow.cpp" />
     <QtRcc Include="recorder.qrc" />
     <QtUic Include="recorderWidget.ui" />
     <QtMoc Include="recorderWidget.h" />
     <ClCompile Include="RecorderManager.cpp" />
     <ClCompile Include="recorderWidget.cpp" />
     <ClCompile Include="main.cpp" />
+    <QtUic Include="test\mainwindow.ui" />
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="RecorderManager.h" />
@@ -122,6 +126,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="audioRecorder.h" />
+    <ClInclude Include="test\aencode.h" />
+    <ClInclude Include="test\gdigrab.h" />
+    <QtMoc Include="test\mainwindow.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
