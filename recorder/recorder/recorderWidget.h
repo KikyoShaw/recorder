@@ -21,6 +21,7 @@ private slots:
 	void sltRecorderStop();
 
 	void sltRecorderWindow();
+	void sltRecorderAudio();
 
 private:
     Ui::recorderClass ui;

@@ -2,6 +2,7 @@
 #include "RecorderManager.h"
 #include <QThread>
 #include "recorderWindow.h"
+#include "audioRecorder.h"
 
 recorder::recorder(QWidget *parent)
     : QWidget(parent)
@@ -21,6 +22,7 @@ recorder::recorder(QWidget *parent)
 	connect(ui.pushButton_start, &QPushButton::clicked, this, &recorder::sltRecorderStart);
 	connect(ui.pushButton_stop, &QPushButton::clicked, this, &recorder::sltRecorderStop);
 	connect(ui.pushButton_start_2, &QPushButton::clicked, this, &recorder::sltRecorderWindow);
+	connect(ui.pushButton_start_3, &QPushButton::clicked, this, &recorder::sltRecorderAudio);
 }
 
 recorder::~recorder()
@@ -53,6 +55,11 @@ void recorder::sltRecorderWindow()
 		m_recorderWindow->show();
 		m_recorderWindow->activateWindow();
 	}
+}
+
+void recorder::sltRecorderAudio()
+{
+	recorderAudio();
 }
 
 void recorder::sltRecorderStart()
